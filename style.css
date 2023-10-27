@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    /* outline: 1px solid red; */
+}
+
+:root{
+--Marine-blue: hsl(213, 96%, 18%);
+--Purplish-blue: hsl(243, 100%, 62%);
+--Pastel-blue: hsl(228, 100%, 84%);
+--Light-blue: hsl(206, 94%, 87%);
+--Strawberry-red: hsl(354, 84%, 57%);
+
+--Cool-gray: hsl(231, 11%, 63%);
+--Light-gray: hsl(229, 24%, 87%);
+--Magnolia: hsl(217, 100%, 97%);
+--Alabaster: hsl(231, 100%, 99%);
+--White: hsl(0, 0%, 100%);
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+  height: 100%;
+   background-color: var(--Magnolia);
+ /* background-image: url(design/desktop-design-step-1.jpg); */
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ display: grid;
+ place-items: center;
+}
+
+main{
+    width: 70rem;
+    height: 44.7rem;
+    margin: auto;
+    padding: 1.5rem;
+    background-color:  white;
+    /* outline: 1px solid black; */
+    border-radius: 25px;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+}
+
+main .left{
+    /* background-color: transparent; */
+    padding-top: .9rem;
+    width: 30%;
+  background-image: url('assets/images/bg-sidebar-desktop.svg')  ;
+   background-repeat: no-repeat;
+   background-size: cover ;
+    /* outline: 1px solid black; */
+    color: white;
+}
+
+.left .nummber{
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    outline: 2px solid white;
+    margin-right: 0.9rem;
+}
+
+.item {
+    cursor: pointer;
+    margin: 2rem 2.3rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.item > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.state-selected{
+    outline-color: var(--Light-blue) !important ;
+    background-color:  var(--Light-blue) !important;
+    color:black
+}
+
+/*
+    Right side
+*/
+
+.right{
+    width: 70%;
+    background-color: white;
+    height: 100%;
+    padding: 3em 4vw 1rem 4vw;
+}
+
+.active{
+    display: flex !important;
+}
+
+.right > div{
+    display: none;
+}
+
+.right h2{
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.right p:first-of-type{
+    margin-block: 0.5rem;
+    font-size: 1.3rem;
+    opacity: 0.6;
+}
+
+
+.step1{
+    height: 100%;
+    background-color: transparent;
+}
+
+.step1 > div > div{
+    margin-block: 0.9rem;
+    display: flex;
+    flex-direction: column;
+}
+.step1 > div > div input {
+
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: var(--Marine-blue);
+    padding: 1rem;
+}
+
+.error-message{
+    display: none;
+}
+
+.step1 > div > div input:focus{
+    outline: 1px solid var(--Marine-blue);
+}
+
+.step1, .step1 > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.step1  .next-step, .step2 .next-step2, .next-step3, .next-step4{
+    margin-left: auto;
+    margin-top: auto;
+    background-color: var(--Marine-blue);
+    color: white;
+    padding: 1.1rem 1.7rem;
+    border-radius: 5px ;
+    border: none;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.step1 .next-step:hover, .step2 .next-step2:hover, .next-step3:hover,  .next-step4:hover{
+    background-color: hsl(213, 62%, 34%);
+}
+
+.right .step2, .right .step3, .right .step4{
+    display: none;
+}
+
+.error-message{
+    color: red;
+    float: right;
+}
+
+/*  Step 2 */
+
+.step2{
+    flex-direction: column;
+    height:100%;
+}
+
+.step2 .plan-types {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 2rem;
+}
+
+.step2 .plan-types > div {
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid var(--Marine-blue);
+    border-radius: 5px;
+    padding:1rem;
+    padding-right: 4.5vw;
+    cursor: pointer;
+}
+
+.step2 .plan-types > div:nth-child(2){
+    margin-inline: 1rem ;
+}
+
+.step2 .image{
+    margin-bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+.step2 img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.my{
+    border-radius: 5px;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--Light-gray);
+}
+
+.step2 .towMonthFree{
+    display: none;
+}
+
+
+.nav-btn{
+    width: 100%;
+    margin-top:auto;
+    margin-left: auto;
+    margin-top: auto;
+    align-self: center;
+    display: flex;
+}
+
+
+.step2 .go-back1, .go-back2, .go-back3{
+    background-color:white ;
+    color: var(--Marine-blue) ;
+    padding: 1.2rem 1.9rem;
+    border-radius: 5px ;
+    border: none;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+
+/*  checkbox */
+
+
+.step2 input[type='checkbox']{
+    display: none;
+  }
+
+ .parent-span{
+    cursor: pointer;
+    width: 4rem;
+    height: 1rem;
+    margin-inline: 0.7rem;
+    background-color: var(--Marine-blue);
+    padding: 0.3rem 1.8rem;
+    border-radius: 20px;
+    position: relative;
+  }
+
+
+  .child-span{
+    background-color: 0;
+    margin: auto 0rem;
+    position: absolute;
+    right: 53%;
+    top:0;
+    bottom: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    border-radius: 50%;
+    transition: right 100ms;
+  }
+  .my {
+    display:flex;
+    justify-content: center;
+  }
+
+  .my .text{
+    opacity: 0.6;
+    font-weight: 600;
+  }
+
+
+  /* Step 3 */
+
+  .step3 {
+    flex-direction: column;
+    height: 100%;
+  }
+
+
+  .service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service >div{
+    margin-top: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .step3 .inner-div{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+
+  .step3 input[type="checkbox"]{
+    margin-right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+
+  /* step4 */
+
+  .step4{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .step4 .inner-div {
+    background-color: var(--Alabaster);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .step4 .inner-div > div{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .step4 .inner-div > div > div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .step4 .inner-div ~ div
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}

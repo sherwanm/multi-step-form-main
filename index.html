@@ -2,24 +2,220 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <title>Frontend Mentor | Multi-step form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+ 
+  <main class="main">
+    <div class="left">
+      <div class="item item1">
+        <span class="nummber">1</span>
+        <div>
+          <span>STEP 1</span>
+          <strong>YOUR INFO</strong>
+        </div>
+      </div>
 
-  
+      <div class="item item2">
+        <span class="nummber state-selected">2</span>
+        <div>
+          <span>STEP 2</span>
+          <strong>SELECT PLAN</strong>
+        </div>
+      </div>
+
+      <div class="item item3">
+        <span class="nummber">3</span>
+        <div>
+          <span>STEP 3</span>
+          <strong>ADD-ONS</strong>
+        </div>
+      </div>
+
+      <div class="item item4">
+        <span class="nummber">4</span>
+        <div>
+          <span>STEP 4</span>
+          <strong>SUMMARY</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+
+      <div class="step step1">
+        <div>
+
+          <h2> Personal info</h2>
+          <p>  Please provide your name, email address, and phone number. </p>
+          <div>
+            <div><span> Name</span> <span class="error-message">This field is required</span></div>
+            <input type="input" placeholder="e.g. Stephen King">
+          </div>
+          <div>
+            <div><span> Email Address</span><span class="error-message">This field is required</span></div>
+            <input type="input" placeholder="e.g. stephenking@lorem.com">
+          </div>
+
+          <div>
+            <div><span> Phone Number</span><span class="error-message">This field is required</span></div>
+             <input type="input" placeholder="e.g. +1 234 567 890">
+          </div>
+
+        </div>
+
+        <input type="button" value="Next Step" class="next-step">
+
+      </div>
+
+      <div class="step step2 active">
+
+        <h2> Select your plan</h2>
+        <p>   You have the option of monthly or yearly billing. </p>
+
+        <div class="plan-types">
+
+          <div>
+              <div class="image">
+                <img src="assets/images/icon-arcade.svg">
+              </div>
+            <div>
+              <strong> Arcade</strong>
+              <p class="plan-price">$9/mo</p>
+              <span class="towMonthFree">2 months fre</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="image">
+              <img src="assets/images/icon-advanced.svg">
+            </div>
+            <div>
+              <strong> Advanced</strong>
+              <p class="plan-price">$12/mo</p>
+              <span class="towMonthFree">2 months fre</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="image">
+              <img src="assets/images/icon-pro.svg">
+            </div>
+            <div>
+              <strong> Pro</strong>
+              <p class="plan-price">$15/mo</p>
+              <span class="towMonthFree">2 months fre</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="my">
+          <span class="text monthly">
+            Monthly
+          </span>
+          <label for="am">
+            <input type="checkbox" name="am" id="am" class="input">
+            <span class="parent-span">
+              <span class="child-span"></span>
+            </span>
+          </label>
+          <span class="text yearly">
+            Yearly
+          </span>
+        </div>
+
+        <div class="nav-btn">
+          <input type="button" value="Go Back" class="go-back1">
+          <input type="button" value="Next Step" class="next-step2">
+        </div>
+
+      </div>
+
+
+      <div class="step step3">
+
+        <h2>Pick add-ons</h2>
+        <p>Add-ons help enhance your gaming experience.</p>
+
+        <div class="service">
+          <div>
+            <input type="checkbox" id="online-service">
+            <div class="inner-div">
+              <strong> Online Service</strong>
+              <p>Access to multiplayer games</p>
+            </div>
+            <p> +$1/mo</p>
+          </div>
+
+          <div>
+            <input type="checkbox" id="larger-storage">
+            <div class="inner-div">
+              <strong> Larger storage</strong>
+              <p> Custom theme on your profile</p>
+            </div>
+            <p> +$2/mo</p>
+
+          </div>
+
+          <div>
+            <input type="checkbox" id="customizable-rofile">
+            <div class="inner-div">
+              <strong> Customizable Profile</strong>
+              <p>Custom theme on your profile</p>
+            </div>
+            <p>  +$2/mo</p>
+
+          </div>
+        </div>
+
+        <div class="nav-btn">
+          <input type="button" value="Go Back" class="go-back2">
+          <input type="button" value="Next Step" class="next-step3">
+        </div>
+
+      </div>
+
+
+      <div class="step step4">
+        <h2>Pick add-ons</h2>
+        <p>Add-ons help enhance your gaming experience.</p>
+
+        <div class="inner-div">
+          <div>
+            <div>
+              <strong> Arcade(Monthly)</strong>
+              <span>Change</span>
+            </div>
+            <strong>$9/mo</strong>
+          </div>
+          <hr>
+          <div><span>Online Service</span> <span>+$1/mo</span>      </div>
+          <div><span>Larger storage </span><span>+$2/mo</span>      </div>
+          <div><span>Customizable Profile </span><span>+$2/mo</span></div>
+        </div>
+
+        <div><span>Total(per month)</span><span>+$12/mo</span></div>
+
+        <div class="nav-btn">
+          <input type="button" value="Go Back" class="go-back3">
+          <input type="button" value="Confirm" class="next-step4">
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
 
   <!-- Sidebar start -->
-
+<!--
   Step 1
   Your info
 
@@ -30,13 +226,13 @@
   Add-ons
 
   Step 4
-  Summary
+  Summary -->
 
   <!-- Sidebar end -->
 
   <!-- Step 1 start -->
 
-  Personal info
+  <!-- Personal info
   Please provide your name, email address, and phone number.
 
   Name
@@ -48,13 +244,13 @@
   Phone Number
   e.g. +1 234 567 890
 
-  Next Step
+  Next Step -->
 
   <!-- Step 1 end -->
 
   <!-- Step 2 start -->
 
-  Select your plan
+  <!-- Select your plan
   You have the option of monthly or yearly billing.
 
   Arcade
@@ -70,12 +266,12 @@
   Yearly
 
   Go Back
-  Next Step
+  Next Step -->
 
   <!-- Step 2 end -->
 
   <!-- Step 3 start -->
-
+<!--
   Pick add-ons
   Add-ons help enhance your gaming experience.
 
@@ -92,37 +288,39 @@
   +$2/mo
 
   Go Back
-  Next Step
+  Next Step -->
 
   <!-- Step 3 end -->
 
   <!-- Step 4 start -->
-
+<!--
   Finishing up
-  Double-check everything looks OK before confirming.
+  Double-check everything looks OK before confirming. -->
 
   <!-- Dynamically add subscription and add-on selections here -->
-
+<!--
   Total (per month/year)
 
   Go Back
-  Confirm
+  Confirm -->
 
   <!-- Step 4 end -->
 
   <!-- Step 5 start -->
-
+<!--
   Thank you!
 
   Thanks for confirming your subscription! We hope you have fun
   using our platform. If you ever need support, please feel free
-  to email us at support@loremgaming.com.
+  to email us at support@loremgaming.com. -->
 
   <!-- Step 5 end -->
 
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
+
+<script src="script.js"></script>
 </html>
